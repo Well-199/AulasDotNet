@@ -1,9 +1,14 @@
 ﻿using Aulas.Models;
 using System.Text.Json;
 
-List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+List<int> numbers = [10, 9, 8, 7, 6, 5, 5, 3, 3, 1];
 
 List<Pessoa> pessoas = [];
+
+numbers.RemoveAt(3);
+numbers.Insert(3, 12);
+
+numbers.Sort();
 
 foreach (int number in numbers)
 {
@@ -13,6 +18,8 @@ foreach (int number in numbers)
         Age = number,
     };
     pessoas.Add(people);
+
+    Console.WriteLine($"Numeros: {number}");
 
     if (people.Name.Contains("Wellington"))
     {
